@@ -1,0 +1,20 @@
+# wrangler.toml
+name = "gemini"
+main = "worker/src/index.ts"
+compatibility_date = "2025-03-27"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+binding = "ASSETS"
+directory = "public"
+
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "GEMINI_KEYS_KV"
+id = "857f642c701745b6a64c0de327f5e06e"
+
+[[kv_namespaces]]
+binding = "WORKER_CONFIG_KV"
+id = "857f642c701745b6a64c0de327f5e06e"
